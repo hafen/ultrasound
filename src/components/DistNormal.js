@@ -43,6 +43,13 @@ class DistNormal extends React.Component {
   }
 }
 
+DistNormal.propTypes = {
+  d3: React.PropTypes.object,
+  color: React.PropTypes.string,
+  lab: React.PropTypes.string,
+  index: React.PropTypes.number
+};
+
 export default DistNormal;
 
 DistNormalD3.enter = (props, selection) => {

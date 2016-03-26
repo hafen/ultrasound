@@ -21,15 +21,17 @@ const DistPlot = ({ width, height, pos, optPos, optSD }) => {
   const maxSD = d3.max(sds) * 3;
   const maxDistHeight = 1 / d3.min(sds);
 
-  const spos = pos.sort((a, b) => a - b);
+  let spos = JSON.parse(JSON.stringify(pos));
+  spos = spos.sort((a, b) => a - b);
   const labs = [];
   let weekLab = '';
   for (let i = 0; i < spos.length; i++) {
     weekLab = i === 0 ? spos[0] : `${weekLab}, ${spos[i]}`;
     labs.push(`Measured at week${i === 0 ? '' : 's'} ${weekLab}`);
   }
-  const soptPos = optPos.sort((a, b) => a - b);
-  labs.push(`Optimal: week${soptPos.length === 0 ? '' : 's'} ${soptPos.join(', ')}`);
+  let soptPos = JSON.parse(JSON.stringify(optPos));
+  soptPos = optPos.sort((a, b) => a - b);
+  labs.push(`Optimal: week${soptPos.length === 1 ? '' : 's'} ${soptPos.join(', ')}`);
 
   const d3props = {
     margin,
