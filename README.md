@@ -1,23 +1,6 @@
-[![Build Status](https://travis-ci.org/Granze/react-starterify.svg?branch=master)](https://travis-ci.org/Granze/react-starterify)
-[![bitHound Score](https://www.bithound.io/github/Granze/react-starterify/badges/score.svg)](https://www.bithound.io/github/Granze/react-starterify/master)
-[![Dependency status](https://david-dm.org/granze/react-starterify/status.svg)](https://david-dm.org/granze/react-starterify "Dependency status")
-[![Dev dependency status](https://david-dm.org/granze/react-starterify/dev-status.svg)](https://david-dm.org/granze/react-starterify#info=devDependencies "Dev dependency status")
+# ultrasound
 
-# React Starterify
-
-A minimal React JS application starter kit.
-
-## Start small, add what you need.
-
-React Starterify aims to give you a good starting point for your projects.
-If you're looking for a minimal ES6 (ES2015) React JS starter with nice [shallow rendering](https://facebook.github.io/react/docs/test-utils.html#shallow-rendering) test examples, this is probably for you.
-
-## Why there are no Flux or Isomorphic things inside?
-
-If you are a beginner, you probably don't want a complex structure with lots of things to care about.
-If you are an advanced user, and you need more features, you can choose one of the thousand existing full-stack starter kit. Or you can build your own. 
-
-## Usage
+## Built using React Starterify
 
 [Download React Starterify](https://github.com/Granze/react-starterify/releases/latest)
 
