@@ -4,7 +4,7 @@ import SelectN from '../components/SelectN';
 
 const mapStateToProps = (state) => (
   {
-    selected: state.numMeasure
+    selected: state.get('numMeasure')
   }
 );
 

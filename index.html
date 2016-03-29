@@ -2,18 +2,21 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Ultrasound Gestational Age Estimation Planning</title>
-
-    <!-- build:css -->
-    <link rel="stylesheet" href="dist/styles/main.css">
-    <!-- endbuild -->
+    <title>Ultrasound Gestational Growth Estimation Planning</title>
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Roboto:400,300);
+      body { font-family: 'Roboto', sans-serif; }
+      #page { width: 900px; margin: 0 auto; }
+      h1 { font-weight: 300; font-size: 39px; }
+      .description { font-weight: 300; font-size: 17px; line-height: 22px; }
+    </style>
   </head>
   <body>
     <div id="page">
-      <h1>Ultrasound Gestational Age Estimation Planning</h1>
+      <h1>Ultrasound Gestational Growth Estimation Planning</h1>
       <div class="description">
         <p>
-          This is a prototype application for providing interactive feedback on the effect of timing of ultrasound appointments on gestational age estimation accuracy.  In its current state, the goal is to experiment with different visual / interactive components and wire them together.  Everything is currently based on dummy data.
+          This is a prototype application for providing interactive feedback on the effect of timing of ultrasound appointments on fetal growth estimation accuracy.  In its current state, the goal is to experiment with different visual / interactive components and wire them together.  Everything is currently based on dummy data.
         </p>
         <p>
           Click the number of ultrasound measurements to see handles on the timing slider appear &ndash; initially set at fabricated "optimal" times (denoted by the red tick marks).  Then drag the handles on the slider to see the distributions update.
@@ -21,8 +24,6 @@
       </div>
       <div id="content"></div>
     </div>
-    <!-- build:js -->
-    <script src="dist/js/app.js"></script>
-    <!-- endbuild -->
+    <script src="bundle.js"></script>
   </body>
 </html>

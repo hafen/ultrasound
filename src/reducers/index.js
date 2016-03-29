@@ -1,38 +1,31 @@
-const optimumTimes = [
+import { Map as imMap, fromJS } from 'immutable';
+
+const optimumTimes = fromJS([
   [7],
   [4, 11],
   [2, 10, 18]
-];
-
-const optimumSDs = [4, 3, 2];
-
+]);
+const optimumSDs = fromJS([4, 3, 2]);
 const initialNum = 2;
 
-const initialState = {
+const initialState = imMap({
   numMeasure: initialNum,
-  optMeasureTimes: optimumTimes[initialNum - 1],
-  measureTimes: optimumTimes[initialNum - 1],
-  optSD: optimumSDs[initialNum - 1]
-};
+  optMeasureTimes: optimumTimes.get(initialNum - 1),
+  measureTimes: optimumTimes.get(initialNum - 1),
+  optSD: optimumSDs.get(initialNum - 1)
+});
 
 const app = (state = initialState, action) => {
   switch (action.type) {
     case 'SET_NUM_MEASURE':
-      return Object.assign({}, state, {
-        numMeasure: action.n,
-        optMeasureTimes: optimumTimes[action.n - 1],
-        measureTimes: optimumTimes[action.n - 1],
-        optSD: optimumSDs[action.n - 1]
+      return state.withMutations((d) => {
+        d.set('numMeasure', action.n);
+        d.set('optMeasureTimes', optimumTimes.get(action.n - 1));
+        d.set('measureTimes', optimumTimes.get(action.n - 1));
+        d.set('optSD', optimumSDs.get(action.n - 1));
       });
     case 'SET_MEASURE_TIME':
-      return Object.assign({}, state, {
-        measureTimes: state.measureTimes.map((val, index) => {
-          if (index === action.time.index) {
-            return action.time.val;
-          }
-          return val;
-        })
-      });
+      return state.setIn(['measureTimes', action.time.index], action.time.val);
     default:
       return state;
   }

@@ -1,59 +1,47 @@
-[![Build Status](https://travis-ci.org/Granze/react-starterify.svg?branch=master)](https://travis-ci.org/Granze/react-starterify)
-[![bitHound Score](https://www.bithound.io/github/Granze/react-starterify/badges/score.svg)](https://www.bithound.io/github/Granze/react-starterify/master)
-[![Dependency status](https://david-dm.org/granze/react-starterify/status.svg)](https://david-dm.org/granze/react-starterify "Dependency status")
-[![Dev dependency status](https://david-dm.org/granze/react-starterify/dev-status.svg)](https://david-dm.org/granze/react-starterify#info=devDependencies "Dev dependency status")
+react-hot-boilerplate
+=====================
 
-# React Starterify
+The minimal dev environment to enable live-editing React components.
 
-A minimal React JS application starter kit.
+### Usage
 
-## Start small, add what you need.
+```
+npm install
+npm start
+open http://localhost:3000
+```
 
-React Starterify aims to give you a good starting point for your projects.
-If you're looking for a minimal ES6 (ES2015) React JS starter with nice [shallow rendering](https://facebook.github.io/react/docs/test-utils.html#shallow-rendering) test examples, this is probably for you.
+Now edit `src/App.js`.  
+Your changes will appear without reloading the browser like in [this video](http://vimeo.com/100010922).
 
-## Why there are no Flux or Isomorphic things inside?
+### Linting
 
-If you are a beginner, you probably don't want a complex structure with lots of things to care about.
-If you are an advanced user, and you need more features, you can choose one of the thousand existing full-stack starter kit. Or you can build your own. 
+This boilerplate project includes React-friendly ESLint configuration.
 
-## Usage
+```
+npm run lint
+```
 
-[Download React Starterify](https://github.com/Granze/react-starterify/releases/latest)
+### Using `0.0.0.0` as Host
 
-__Install the dependencies:__
+You may want to change the host in `server.js` and `webpack.config.js` from `localhost` to `0.0.0.0` to allow access from same WiFi network. This is not enabled by default because it is reported to cause problems on Windows. This may also be useful if you're using a VM.
 
-`npm install`
+### Missing Features
 
-__Test:__
+This boilerplate is purposefully simple to show the minimal configuration for React Hot Loader. For a real project, you'll want to add a separate config for production with hot reloading disabled and minification enabled. You'll also want to add a router, styles and maybe combine dev server with an existing server. This is out of scope of this boilerplate, but you may want to look into [other starter kits](https://github.com/gaearon/react-hot-loader/blob/master/docs/README.md#starter-kits).
 
-`npm test`
+### Dependencies
 
-__Development mode with livereload:__
+* React
+* Webpack
+* [webpack-dev-server](https://github.com/webpack/webpack-dev-server)
+* [babel-loader](https://github.com/babel/babel-loader)
+* [react-hot-loader](https://github.com/gaearon/react-hot-loader)
 
-`npm run watch`
+### Resources
 
-__When you are done, create a production ready version of the JS bundle:__
-
-`npm run build`
-
-__Deploy on Github pages with one command:__
-
-`npm run deploy`
-
-## What's new in v2.0:
-
-- React Router integration
-- CSS processing via [PostCSS](https://github.com/postcss/postcss)
-  - cssnano for minification
-  - nested
-  - extend
-  - vars
-  - autoprefixer
-- gulpifle written in ES6 (ES2015)
-- better folder structure
-- no predefined AJAX libraries (use [Fetch](https://github.com/github/fetch) or [Superagent](https://github.com/visionmedia/superagent) if you need one).
-
-## License
-
-[MIT License](http://opensource.org/licenses/MIT)
+* [Demo video](http://vimeo.com/100010922)
+* [react-hot-loader on Github](https://github.com/gaearon/react-hot-loader)
+* [Integrating JSX live reload into your workflow](http://gaearon.github.io/react-hot-loader/getstarted/)
+* [Troubleshooting guide](https://github.com/gaearon/react-hot-loader/blob/master/docs/Troubleshooting.md)
+* Ping dan_abramov on Twitter or #reactjs IRC

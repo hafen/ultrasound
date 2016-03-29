@@ -3,9 +3,9 @@ import DistPlot from '../components/DistPlot';
 
 const mapStateToProps = (state) => (
   {
-    pos: state.measureTimes,
-    optPos: state.optMeasureTimes,
-    optSD: state.optSD,
+    pos: state.get('measureTimes').toJS(),
+    optPos: state.get('optMeasureTimes').toJS(),
+    optSD: state.get('optSD'),
     width: 900,
     height: 350
   }
